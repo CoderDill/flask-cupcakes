@@ -20,6 +20,9 @@ def serialize_cupcake(cupcake):
         "image": cupcake.image
     }
 
+@app.route("/")
+def homepage():
+    return render_template("index.html")
 
 @app.route("/api/cupcakes")
 def list_all_cupcakes():
