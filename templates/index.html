@@ -15,13 +15,43 @@
     />
   </head>
   <body>
-      <button id="show-cupcakes" class="btn btn-primary">Show</button>
-    <div class="container"></div>
-      <form action="">
-          <input type="text">
-      </form>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <form action="/add-cupcake" method="POST">
+            <div class="form-group">
+              <label for="flavor">Cupcake Flavor</label>
+              <input
+                type="text"
+                class="form-control"
+                id="flavor"
+                name="flavor"
+              />
+            </div>
+            <div class="form-group">
+              <label for="size">Size</label>
+              <input type="text" class="form-control" id="size" name="size" />
+            </div>
+            <div class="form-group">
+              <label for="rating">Rating</label>
+              <input
+                type="text"
+                class="form-control"
+                id="rating"
+                name="rating"
+              />
+            </div>
+            <div class="form-group">
+              <label for="image">Image</label>
+              <input type="text" class="form-control" id="Image" name="image" />
+            </div>
+            <button type="submit" class="btn btn-primary mt-1">Submit</button>
+          </form>
+          <div class="col-sm" id="cupcakes"></div>
+        </div>
       </div>
     </div>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
       integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
